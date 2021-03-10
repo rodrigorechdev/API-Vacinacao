@@ -20,7 +20,7 @@ import org.hibernate.validator.constraints.br.CPF;
 public class Usuario {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)//auto increment
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false)
     private Long id;
 
@@ -47,8 +47,8 @@ public class Usuario {
     @NotNull
 
     @Column(nullable = false)
-    @JsonFormat(pattern="yyyy-MM-dd")//define formato do Date do java. No caso é igual ao formato que é salvo no DB.
-    private Date dataDeNascimento;//ex: "2014-12-30 12:00:32"
+    @JsonFormat(pattern="yyyy-MM-dd")
+    private Date dataDeNascimento;
 
     public void setId(Long id) {
         this.id = id;

@@ -23,7 +23,7 @@ public class InsercoesController {
     @Autowired
     CadastradorBd cadastrador;
     
-    @ResponseStatus(HttpStatus.CREATED)//retorna esse status ocorrer tudo certo
+    @ResponseStatus(HttpStatus.CREATED)
     @RequestMapping(value = "usuario", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
     public Object insereUsuario(@RequestBody @Valid Usuario usuario) {
         try {

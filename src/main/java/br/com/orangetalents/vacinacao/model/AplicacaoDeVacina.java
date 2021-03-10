@@ -18,7 +18,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 public class AplicacaoDeVacina {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)//auto increment
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false)
     private Long id;
 
@@ -36,8 +36,8 @@ public class AplicacaoDeVacina {
     @NotNull
 
     @Column(nullable = false)
-    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")//define formato do Date do java. É igual ao formato que é salvo no DB.
-    private Date dataDeVacinacao; //ex: "2014-12-30 12:00:32"
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    private Date dataDeVacinacao;
 
     public void setId(Long id) {
         this.id = id;
